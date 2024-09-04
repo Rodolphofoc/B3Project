@@ -1,0 +1,29 @@
+<div class="container">
+    <h3 class="text-center">B3 Teste Calculo CDB</h3>
+
+    <div class="d-flex justify-content-center">
+        <div class="card mx-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Insira o valor e os meses de investimento</h5>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="valor">Valor</label>
+                        <input type="number" class="form-control" id="valor" name="InvestmentValue" [(ngModel)]="investment.InvestmentValue" placeholder="Insira o valor">
+                    </div>
+                    <div class="form-group">
+                        <label for="rate">Meses</label>
+                        <input type="number" class="form-control" id="rate" name="InvestmentRate" [(ngModel)]="investment.InvestmentRate" placeholder="Insira a taxa">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Calcular</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="card mx-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Resultado</h5>
+                <p class="card-text">Resultado do cálculo: {{ calculationResult }}</p>
+            </div>
+        </div>
+    </div>
+</div>
